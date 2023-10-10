@@ -30,7 +30,7 @@ CREATE TABLE invoices (
     total_amount DECIMAL(10,2) NOT NULL,
     generated_at TIMESTAMP NOT NULL,
     payed_at TIMESTAMP,
-    medical_history_id INTEGER NOT NULL,
+    medical_history_id INTEGER NOT NULL UNIQUE,
     constraint fk_invoices foreign key (medical_history_id) references medical_histories(id)
 );
 
