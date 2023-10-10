@@ -116,6 +116,13 @@ Must-Install-Project-with-the-Following-Programmes:
 - Twitter: [@twitterhandle](https://twitter.com/maypyone015)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/may-pyone-9439961a3/)
 
+## 🔭 Future Features <a name="future-features"></a>
+
+- Adding more functionality to the app.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
