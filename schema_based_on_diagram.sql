@@ -30,7 +30,8 @@ CREATE TABLE invoices (
     total_amount DECIMAL(10,2) NOT NULL,
     generated_at TIMESTAMP NOT NULL,
     payed_at TIMESTAMP,
-    medical_history_id INTEGER NOT NULL
+    medical_history_id INTEGER NOT NULL,
+    constraint fk_invoices foreign key (medical_history_id) references medical_histories(id)
 );
 
 CREATE TABLE invoice_items (
@@ -52,3 +53,9 @@ CREATE TABLE medical_history_treatments (
     CONSTRAINT fk_treatment FOREIGN KEY (treatment_id) REFERENCES treatments(id)
 );
 
+create index idx_fkhistory on medical_histories(patient_id);
+create index idx_fkhistory_id on invoices(medical_history_id);
+create index idx_fkteatment_id on invoice_items(treatment_id);
+create index idx_fkinvoice_id on invoice_items(invoice_id);
+create index idx_fkmedical_history on medical_history_treatments(medical_history_id);
+create index idx_fkhistory_treatment on medical_history_treatments(treatment_id);
